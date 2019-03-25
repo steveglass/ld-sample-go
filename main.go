@@ -27,6 +27,7 @@ func main() {
 	/* The LD doc doesn't have any reference to the second return, error */
 	ld_client, _ := ld.MakeClient(sdk_key, 5*time.Second)
 
+	/* you'll need t0 create the "test_in_go" fflag in your LD portal */
 	show_feature, _ := ld_client.BoolVariation("test_in_go", ld.NewUser(user), false)
 	if show_feature {
 		fmt.Printf("The feature is enabled!\n")
